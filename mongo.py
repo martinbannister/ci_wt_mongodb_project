@@ -22,25 +22,7 @@ conn = mongo_connect(MONGO_URI)
 
 coll = conn[DATABASE][COLLECTION]
 
-new_docs = [{
-    "first": "terry",
-    "last": "pratchett",
-    "dob": "28/04/1948",
-    "hair_colour": "not much",
-    "occupation": "writer",
-    "nationality": "british"
-}, {
-    "first": "george",
-    "last": "rr martin",
-    "dob": "28/09/1948",
-    "hair_colour": "white",
-    "occupation": "writer",
-    "nationality": "american"
-}]
-
-coll.insert_many(new_docs)
-
-documents = coll.find()
+documents = coll.find({"occupation": "writer"})
 
 for doc in documents:
     print(doc)
