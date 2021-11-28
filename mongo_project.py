@@ -33,11 +33,11 @@ def add_record():
     print("")
     first = input("Enter first name > ")
     last = input("Enter last name > ")
-    dob = input("Enter dob name > ")
-    gender = input("Enter gender name > ")
-    hair_colour = input("Enter hair colour name > ")
-    occupation = input("Enter occupation name > ")
-    nationality = input("Enter nationality name > ")
+    dob = input("Enter dob > ")
+    gender = input("Enter gender > ")
+    hair_colour = input("Enter hair colour > ")
+    occupation = input("Enter occupation > ")
+    nationality = input("Enter nationality > ")
 
     new_doc = {
         "first": first.lower(),
