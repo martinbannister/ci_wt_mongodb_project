@@ -74,13 +74,22 @@ def get_record():
     return doc
 
 
+def find_record():
+    doc = get_record()
+    if doc:
+        print("")
+        for k,v in doc.items():
+            if k !="_id":
+                print(k.capitalize() + ": " + v.capitalize())
+
+
 def main_loop():
     while True:
         option = show_menu()
         if option == "1":
             add_record()
         elif option == "2":
-            print("You have sleected option 2")
+            find_record()
         elif option == "3":
             print("You have sleected option 3")
         elif option == "4":
